@@ -5,6 +5,7 @@ import replace from 'rollup-plugin-replace';
 import {terser} from 'rollup-plugin-terser';
 import globals from 'rollup-plugin-node-globals';
 import builtins from 'rollup-plugin-node-builtins';
+import json from 'rollup-plugin-json';
 
 const basePlugins = [
   commonjs(),
@@ -13,6 +14,7 @@ const basePlugins = [
     extensions: ['.js', '.ts'],
   }),
   resolve(),
+  json(),
 ];
 
 const external = ['os', 'url'];

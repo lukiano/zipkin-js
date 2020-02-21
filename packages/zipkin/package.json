@@ -18,6 +18,7 @@
   "repository": "https://github.com/openzipkin/zipkin-js",
   "dependencies": {
     "base64-js": "^1.1.2",
+    "fast-json-stringify": "^1.16.4",
     "is-promise": "^2.1.0"
   }
 }

@@ -1,3 +1,5 @@
+const fastJsonStringify = require('./fastJsonEncoder');
+
 function toV1Endpoint(endpoint) {
   if (endpoint === undefined) {
     return undefined;
@@ -152,7 +154,7 @@ function encodeV2(span) {
   if (span.shared) {
     copy.shared = true;
   }
-  return JSON.stringify(copy);
+  return fastJsonStringify(copy);
 }
 
 module.exports.JSON_V1 = {
